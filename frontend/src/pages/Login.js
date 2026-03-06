@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import API from "../services/api";
 
 export const Login = () => {
@@ -22,6 +22,10 @@ export const Login = () => {
                 <button className="bg-green-500 text-white px-4 py-2 w-full">
                     Login
                 </button>
+                <p className="text-sm mt-3 text-center">
+                    Don't have an account? {" "}
+                    <Link to="/register" className="text-blue-500">Register</Link>
+                </p>
             </form>
         </div>
     );

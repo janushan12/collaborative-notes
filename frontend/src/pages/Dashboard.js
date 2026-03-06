@@ -19,7 +19,7 @@ export const Dashboard = () => {
             <NoteEditor refresh={fetchNotes} />
             <div className="grid grid-cols-3 gap-4 mt-6">
                 {notes.map(note => (
-                    <NoteCard key={note._id} note={true} />
+                    <NoteCard key={note._id} note={note} />
                 ))}
             </div>
         </div>

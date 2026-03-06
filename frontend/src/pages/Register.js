@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import API from "../services/api";
 
 export const Register = () => {
@@ -22,6 +22,9 @@ export const Register = () => {
                 <input className="border p-2 w-full mb-3" placeholder="Email" onChange={(e) => setForm({ ...form, email: e.target.value })} />
                 <input type="password" className="border p-2 w-full mb-3" placeholder="Password" onChange={(e) => setForm({ ...form, password: e.target.value })} />
                 <button type="submit" className="bg-blue-500 text-white px-4 py-2 w-full">Register</button>
+                <p className="text-sm mt-3 text-center">
+                    Already have an account? {" "}<Link to="/" className="text-blue-500">Login</Link>
+                </p>
             </form>
         </div>
     );
